@@ -1,7 +1,2 @@
-# SPRING MVC
-spring.view:
-  suffix: .jsp
-  prefix: /WEB-INF/views/
-
 # SOLR
 solr.host: http://localhost:8983/solr

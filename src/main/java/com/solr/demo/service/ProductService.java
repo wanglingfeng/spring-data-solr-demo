@@ -1,15 +1,16 @@
 package com.solr.demo.service;
 
-import com.solr.demo.repository.domain.Product;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.solr.core.query.result.FacetPage;
+import com.solr.demo.controller.domain.ProductDTO;
+
+import java.util.List;
 
 public interface ProductService {
 
-    Page<Product> findByName(String searchTerm, Pageable pageable);
+    List<ProductDTO> findAll();
 
-    Product findById(String id);
+    ProductDTO findById(String id);
 
-    FacetPage<Product> autoCompleteNameFragment(String fragment, Pageable pageable);
+    void create(ProductDTO product);
+
+    void remove(String id);
 }

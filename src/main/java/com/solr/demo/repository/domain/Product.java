@@ -2,7 +2,6 @@ package com.solr.demo.repository.domain;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.solr.core.geo.Point;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
@@ -33,7 +32,4 @@ public class Product {
 
     @Indexed
     private Integer popularity;
-
-    @Indexed("store")
-    private Point location;
 }
